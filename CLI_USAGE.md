@@ -55,7 +55,8 @@ python3 main.py --interactive
 
 **Interactive Commands:**
 - `help` - Show query examples and usage
-- `stats` - Display query processing statistics  
+- `stats` - Display query processing statistics
+- `llm` - Show LLM integration status and usage statistics
 - `quit` - Exit the application
 
 **Example Session:**
@@ -69,6 +70,16 @@ python3 main.py --interactive
 
 📄 Show full detailed response? (y/n): y
 [Full detailed response]
+
+🔍 Your question: llm
+🤖 LLM Integration Status:
+   Enabled: ✅ Yes
+   Active Provider: openai
+   Usage Statistics:
+     Total Requests: 5
+     Success Rate: 100.0%
+     Total Tokens: 1,247
+     Estimated Cost: $0.0019
 ```
 
 ### 2. Demo Mode (`--demo`)
@@ -208,6 +219,26 @@ The system requires CSV files in the `sample-data-set` directory:
 - logging
 - argparse
 
+### Optional LLM Dependencies
+For enhanced query understanding and response generation:
+
+**OpenAI Integration:**
+```bash
+pip install openai>=1.0.0
+export OPENAI_API_KEY=your_api_key_here
+```
+
+**Ollama Integration:**
+```bash
+pip install ollama>=0.1.0
+ollama pull llama2
+```
+
+**Setup Utility:**
+```bash
+python3 llm_setup.py
+```
+
 ## Output Format
 
 ### Executive Summary
@@ -291,6 +322,13 @@ print(response)
 
 ## Advanced Features
 
+### LLM Integration
+- **Optional Enhancement**: Enhanced query understanding and response generation
+- **Multiple Providers**: OpenAI API, local Ollama, or rule-based fallback
+- **Usage Tracking**: Token usage, cost estimation, and performance metrics
+- **Provider Switching**: Dynamic switching between available providers
+- **Setup Utility**: `python3 llm_setup.py` for easy configuration
+
 ### Query History
 - Automatic tracking of processed queries
 - Success/failure statistics
@@ -302,12 +340,14 @@ print(response)
 - Data availability validation
 - Performance monitoring
 - Error tracking
+- LLM integration status and usage statistics
 
 ### Extensibility
 - Modular architecture for adding new query types
 - Configurable response templates
 - Pluggable analysis engines
 - Custom recommendation rules
+- LLM provider extensibility
 
 ## Best Practices
 

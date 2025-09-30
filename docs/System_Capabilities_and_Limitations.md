@@ -19,9 +19,11 @@
   4. Comparative city analysis
   5. Seasonal/festival period analysis
   6. Capacity planning and risk assessment
-- **Flexible Query Phrasing**: Accepts variations in natural language input
+- **Advanced LLM Integration**: Optional OpenAI API or local Ollama integration for enhanced query understanding
+- **Flexible Query Phrasing**: Accepts variations in natural language input with LLM-enhanced interpretation
 - **Parameter Extraction**: Automatically identifies cities, clients, warehouses, and date ranges from queries
-- **Context Understanding**: Interprets business context and operational terminology
+- **Context Understanding**: Interprets business context and operational terminology with optional LLM enhancement
+- **Graceful Fallback**: Rule-based approach ensures functionality when LLM is unavailable
 
 #### Insight Generation
 - **Root Cause Analysis**: Identifies primary and contributing factors for delivery issues
@@ -47,9 +49,11 @@
 - **Performance Monitoring**: Tracks query processing times and system performance
 
 #### User Interface Options
-- **Command-Line Interface**: Interactive and batch processing modes
+- **Command-Line Interface**: Interactive and batch processing modes with LLM status monitoring
 - **Demo Mode**: Automated demonstration of all use cases
 - **Validation Mode**: System health checking and data validation
+- **LLM Management**: Built-in LLM integration status, usage tracking, and provider switching
+- **Setup Utility**: Dedicated LLM configuration and testing utility (`llm_setup.py`)
 - **Script Integration**: Programmatic access for custom applications
 - **Help System**: Comprehensive usage instructions and examples
 
@@ -60,14 +64,30 @@
 - **Data Testing**: Validation with sample datasets and edge cases
 - **Regression Testing**: Ensures system stability across updates
 
+### ✅ LLM Integration Capabilities
+
+#### Advanced Natural Language Processing
+- **Multiple Provider Support**: OpenAI API, local Ollama, and rule-based fallback
+- **Enhanced Query Understanding**: Improved interpretation of complex natural language queries
+- **Context-Aware Processing**: Better understanding of business context and terminology
+- **Response Enhancement**: More natural, business-friendly response generation
+- **Usage Monitoring**: Comprehensive tracking of token usage, costs, and performance metrics
+
+#### Cost Management and Transparency
+- **Usage Tracking**: Real-time monitoring of API calls, tokens, and estimated costs
+- **Provider Flexibility**: Switch between OpenAI, Ollama, or rule-based approaches
+- **Cost Estimation**: Transparent cost reporting for budget management
+- **Graceful Degradation**: Automatic fallback to rule-based approach when LLM unavailable
+
 ### ✅ Business Value Capabilities
 
 #### Operational Efficiency
 - **Investigation Time Reduction**: From hours to minutes for root cause analysis
+- **Enhanced Query Understanding**: LLM integration improves natural language interpretation accuracy
 - **Automated Correlation**: Eliminates manual data cross-referencing
 - **Proactive Issue Identification**: Identifies problems before they escalate
 - **Resource Optimization**: Improves allocation of drivers, warehouses, and fleet
-- **Decision Support**: Data-driven insights for operational decisions
+- **Decision Support**: Data-driven insights for operational decisions with LLM-enhanced explanations
 
 #### Customer Experience Enhancement
 - **Faster Issue Resolution**: Rapid identification and correction of delivery problems
@@ -99,6 +119,8 @@
 - **Single Query Processing**: Processes one query at a time, no batch query support
 - **Limited Query Complexity**: Complex multi-part queries may require decomposition
 - **English Language Only**: Natural language processing limited to English queries
+- **LLM Dependency**: Enhanced features require external API (OpenAI) or local setup (Ollama)
+- **Cost Considerations**: OpenAI API usage incurs costs based on token consumption
 
 #### Analytical Limitations
 - **Historical Analysis Only**: Cannot provide real-time monitoring or alerts
@@ -126,13 +148,29 @@
 - **Limited Export Options**: Basic text output, no report generation
 - **No User Management**: No authentication, authorization, or user profiles
 
+### 📋 LLM Integration Limitations
+
+#### Provider Dependencies
+- **External API Dependency**: OpenAI integration requires internet connectivity and API availability
+- **Local Resource Requirements**: Ollama requires significant local computing resources
+- **Model Limitations**: LLM responses depend on training data and may not always be accurate
+- **Cost Variability**: OpenAI API costs can vary based on usage patterns and model selection
+
+#### Technical Constraints
+- **Token Limits**: API calls are subject to token limits and rate limiting
+- **Response Time**: LLM processing may add latency compared to rule-based approach
+- **Model Updates**: External model updates may affect response consistency
+- **Privacy Considerations**: OpenAI API sends queries to external servers
+
 ### 📋 Business and Operational Limitations
 
 #### Implementation Constraints
 - **Technical Expertise Required**: Requires Python knowledge for setup and maintenance
+- **LLM Configuration**: Optional LLM setup requires API key management or local model installation
 - **Data Preparation**: Requires manual data preparation and formatting
 - **Training Needed**: Users need training on query formulation and interpretation
 - **Maintenance Overhead**: Requires ongoing maintenance for data updates and system health
+- **Cost Management**: Organizations using OpenAI API need to monitor and manage usage costs
 
 #### Organizational Limitations
 - **Single Department Focus**: Designed for logistics operations, not cross-functional analysis

@@ -110,7 +110,7 @@ SUPPORTED QUERY TYPES:
    Purpose: Analyze delivery delays in a specific city for a given date
 
 2. Client Failure Analysis
-   Example: "Why did Client ABC's orders fail in the past week?"
+   Example: "Why did Client Mann Group's orders fail in the past week?"
    Purpose: Examine order failure patterns for a specific client
 
 3. Warehouse Failure Analysis
@@ -256,7 +256,7 @@ For more information, see QUERY_USAGE.md or README.md
             },
             {
                 'title': '2. Client Failure Analysis', 
-                'query': 'Why did Client ABC\'s orders fail in the past week?',
+                'query': 'Why did Client Mann Group\'s orders fail in the past week?',
                 'description': 'Examines order failure patterns for a specific client over time'
             },
             {

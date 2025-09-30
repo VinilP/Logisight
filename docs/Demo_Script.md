@@ -25,7 +25,7 @@ python3 main.py --validate
 ```
 
 **Voice Script:**
-"First, let's validate our system. The validation checks all components, loads and validates our 8 data sources, and confirms everything is working correctly. As you can see, we have orders, clients, drivers, warehouses, fleet logs, external factors, customer feedback, and warehouse logs all loaded successfully. The system has processed over 1,000 orders with complete correlation across all data sources."
+"First, let's validate our system. The validation checks all components, loads and validates our 8 data sources, and confirms everything is working correctly. As you can see, we have orders, clients, drivers, warehouses, fleet logs, external factors, customer feedback, and warehouse logs all loaded successfully. The system has processed over 1,000 orders with complete correlation across all data sources. Notice the LLM integration status - the system can optionally use OpenAI API or local Ollama for enhanced query understanding and response generation."
 
 ### Demo Mode Overview (60 seconds)
 
@@ -83,6 +83,14 @@ If we onboard Client XYZ with 5000 extra monthly orders, what new failure risks 
 
 **Voice Script:**
 "Finally, let's see the capacity planning capabilities. This query analyzes the impact of adding 5,000 monthly orders - a 1,006% capacity increase. The system predicts approximately 1,002 additional failures per month based on current patterns, identifies high-risk failure types like stockout and warehouse delays, calculates the need for 167 additional daily deliveries, and provides a comprehensive expansion plan with phased onboarding recommendations."
+
+**[Type 'llm' to show LLM integration status]**
+```
+llm
+```
+
+**Voice Script:**
+"Let me also show you the LLM integration status. The system can optionally use advanced language models for enhanced query understanding and response generation. You can see the active provider, usage statistics, token consumption, and estimated costs. This provides transparency for organizations managing LLM usage and costs."
 
 **[Type 'quit' to exit interactive mode]**
 ```
@@ -174,7 +182,8 @@ cat README.md | head -30
 
 - **Data Integration:** 8 CSV sources with comprehensive validation
 - **Correlation Engine:** Order-centric linking across all domains
-- **Natural Language Processing:** Flexible query interpretation
+- **Natural Language Processing:** Flexible query interpretation with optional LLM enhancement
+- **LLM Integration:** OpenAI API and local Ollama support with usage tracking
 - **Performance:** Fast response times with efficient data processing
 - **Quality Assurance:** Comprehensive testing and validation
 - **Documentation:** Professional documentation and user guides

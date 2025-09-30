@@ -199,8 +199,8 @@ python3 main.py --query "Why did Client Deol Inc's orders fail in the past week?
 ### Capacity Planning Queries:
 ```bash
 # Various capacity scenarios
-python3 main.py --query "If we onboard Client ABC with 1000 extra monthly orders, what new failure risks should we expect?"
-python3 main.py --query "If we onboard Client DEF with 10000 extra monthly orders, what new failure risks should we expect?"
+python3 main.py --query "If we onboard Client Mann Group with 1000 extra monthly orders, what new failure risks should we expect?"
+python3 main.py --query "If we onboard Client Kale PLC with 10000 extra monthly orders, what new failure risks should we expect?"
 ```
 
 ## 📊 System Performance Summary

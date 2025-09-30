@@ -26,10 +26,11 @@ The Logistics Insight System implements a data-driven analytics engine that auto
 
 **Core Capabilities:**
 1. **Automated Data Correlation** - Links events across orders, fleet operations, warehouse activities, external conditions, and customer feedback
-2. **Natural Language Query Interface** - Enables business users to ask questions in plain English
-3. **Narrative Insight Generation** - Transforms complex data relationships into clear, business-friendly explanations
-4. **Actionable Recommendations** - Provides specific operational improvements based on identified patterns
-5. **Proactive Analysis** - Enables predictive analysis for capacity planning and risk assessment
+2. **Natural Language Query Interface** - Enables business users to ask questions in plain English with optional LLM enhancement
+3. **Advanced LLM Integration** - Optional OpenAI API or local Ollama integration for enhanced query understanding and response generation
+4. **Narrative Insight Generation** - Transforms complex data relationships into clear, business-friendly explanations
+5. **Actionable Recommendations** - Provides specific operational improvements based on identified patterns
+6. **Proactive Analysis** - Enables predictive analysis for capacity planning and risk assessment
 
 ### Architecture Overview
 
@@ -109,7 +110,7 @@ The system supports six primary analytical use cases that address common operati
 **Business Value:** Enables rapid response to city-wide delivery issues and proactive planning for known problem areas.
 
 #### 2. Client-Specific Failure Analysis
-**Query Example:** "Why did Client ABC's orders fail in the past week?"
+**Query Example:** "Why did Client Mann Group's orders fail in the past week?"
 
 **Capabilities:**
 - Examines client-specific order patterns, delivery addresses, and payment preferences
@@ -168,6 +169,7 @@ The system supports six primary analytical use cases that address common operati
 #### Technology Stack
 - **Programming Language:** Python 3.8+
 - **Data Processing:** Pandas for efficient data manipulation and analysis
+- **LLM Integration:** Optional OpenAI API or local Ollama for enhanced natural language processing
 - **Architecture Pattern:** Layered architecture with clear separation of concerns
 - **Testing Framework:** Python unittest for comprehensive test coverage
 - **Interface:** Command-line interface with natural language query processing
@@ -200,9 +202,11 @@ The system integrates eight distinct data sources:
 
 **Natural Language Processing:**
 - Pattern-based query interpretation for the six supported use cases
+- Optional LLM enhancement with OpenAI API or local Ollama integration
 - Parameter extraction for cities, clients, warehouses, and date ranges
 - Flexible query phrasing support with synonym recognition
 - Extensible architecture for additional query types
+- Graceful fallback to rule-based approach when LLM is unavailable
 
 **Insight Generation:**
 - Template-based narrative generation with business context
@@ -214,14 +218,15 @@ The system integrates eight distinct data sources:
 
 #### Current Capabilities
 ✅ **Complete Data Integration** - All eight CSV data sources fully integrated and validated  
-✅ **Natural Language Queries** - Support for conversational query input  
+✅ **Natural Language Queries** - Support for conversational query input with optional LLM enhancement  
+✅ **Advanced LLM Integration** - OpenAI API and local Ollama support with usage tracking and cost estimation  
 ✅ **Six Use Case Types** - Complete coverage of primary operational scenarios  
 ✅ **Automated Correlation** - Cross-domain event linking and pattern identification  
-✅ **Human-Readable Insights** - Business-friendly narrative explanations  
+✅ **Human-Readable Insights** - Business-friendly narrative explanations enhanced by LLM capabilities  
 ✅ **Actionable Recommendations** - Specific operational improvement suggestions  
-✅ **Command-Line Interface** - Interactive and demo modes for easy demonstration  
+✅ **Command-Line Interface** - Interactive and demo modes with LLM status monitoring  
 ✅ **Comprehensive Testing** - Unit and integration test coverage  
-✅ **Performance Monitoring** - Query processing time tracking and optimization  
+✅ **Performance Monitoring** - Query processing time tracking and LLM usage optimization  
 
 #### System Limitations
 
